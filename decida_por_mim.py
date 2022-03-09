@@ -14,38 +14,37 @@ Habilidades praticas a aplicar:
 #Faça a lista de todas as possíveis respostas primeiro.
 #Tente adicionar uma que pergunte a data.
 #Tente adicionar uma, que fale problemas matematicos....
+#adicionar interface
 import random
 from tkinter import *
 from tkinter import messagebox
-from time import sleep
+import time
 def oquefazer():
     listaresposta = ['Treinar Python e se alimentar direito', 'Assistir um programa divertido',
              'Já se hidratou hoje? Beba água','Leia um livro', 'Dá uma espiada no Insta',
-                     'Faça sua tarefa que está acumulada!', 'Vai lavar a louça!',
-                'Não sei, sou apenas um computador!', 'Faça o que quiser, você é livre :D',
-            'Não entre em pânico!', 'Nada, tire o dia para descansar', 'Comece uma dieta!',
-                     'Leve o cachorro para passear.', 'Vá dormir', 'Que tal um filme?',
-                     'Meditação pode ajudar', 'Boa pergunta ^_^']
+             'Faça sua tarefa que está acumulada!', 'Vai lavar a louça!',
+             'Não sei, sou apenas um computador!', 'Faça o que quiser, você é livre :D',
+             'Não entre em pânico!', 'Nada, tire o dia para descansar', 'Comece uma dieta!',
+             'Leve o cachorro para passear.', 'Vá dormir', 'Que tal um filme?',
+             'Meditação pode ajudar', 'Boa pergunta!']
+
     resposta = random.choice(listaresposta)
+    texto_resposta['text'] = resposta
 
-    pensando = 'Deixe-me pensar...'
-    texto_resposta['text'] = pensando
-
-    texto_resposta2['text'] = resposta
+def horas():
+    horario= time.clock()
 
 #Área da interface
 quadro = Tk()
 quadro.title('Decida por mim')
-quadro.geometry('350x350')
+quadro.geometry('300x500')
 
-botao_fazer = Button(quadro,text='O que devo fazer?', padx=22, command=oquefazer)
-botao_fazer.grid(column=0, row=0)
+botao_fazer = Button(quadro,sleep(1),text='O que devo fazer?'
+                     ,bg='#00f100', command=oquefazer)
+botao_fazer.grid(column=0, row=0, padx=70, pady=30)
 
 texto_resposta = Label(quadro,text='')
-texto_resposta.grid(column=0, row=1)
-sleep(1)
-texto_resposta2 = Label(quadro,text='')
-texto_resposta2.grid(column=0, row=2)
+texto_resposta.grid(column=0, row=2)
 
 quadro.mainloop()
 
