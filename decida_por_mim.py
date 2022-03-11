@@ -54,7 +54,7 @@ def comida():
 #Área da interface
 quadro = Tk()
 quadro.title('Decida por mim')
-quadro.geometry('300x300')
+quadro.geometry('350x250')
 
 #função (O que fazer)
 botao_fazer = Button(quadro,text='O que devo fazer?'
