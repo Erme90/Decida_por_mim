@@ -1,20 +1,3 @@
-#Iniciando projeto número 02 - decida por mim.
-"""Objetivo: Crie um script que responda qualquer pergunta que for feita a ele.
-Recomendo ter uma base de possíveis respostas (10-20 ou mais).
-Ex: Será que devo sair de casa hoje? Seu script reponde: “Sim, vai lá!
-Detalhes e boas Práticas:
-Habilidades praticas a aplicar:
-    Listas
-    Random
-    Laços de Repetição
-    Input de dados
-    Saida de dados
-    Geração de valores"""
-#IDEIAS
-#Faça a lista de todas as possíveis respostas primeiro.
-#Tente adicionar uma que pergunte a data.
-#Tente adicionar uma, que fale problemas matematicos....
-#adicionar interface
 import datetime
 import random
 from tkinter import *
